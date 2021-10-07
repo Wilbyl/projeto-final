@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render("../views/index.ejs")
+  res.render("../index.ejs");
 });
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
