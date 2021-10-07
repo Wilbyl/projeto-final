@@ -1,2 +1,2 @@
 
-alert = ("ok!!!")
+alert("ok");
