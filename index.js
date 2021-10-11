@@ -11,5 +11,6 @@ app.get("/", (req, res) => {
 });
 app.get("/Cadastro", (req, res) => {
   res.render("../views/cadastro.ejs");
-});
+})
+
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));

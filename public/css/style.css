@@ -1,6 +1,9 @@
 * {
   background-color: rgb(194, 166, 166);
+  border-top-left-radius: 0px;
+    content:icon;
 }
+
 ul {
   position: fixed;
   top: 0;
@@ -10,7 +13,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow:initial;
   background-color: rgba(252, 110, 110, 0.555);
 }
 
@@ -33,6 +36,7 @@ li a:hover {
 .active {
   background-color: 252, 110, 110, 0.555;
 }
+/* pesquisa*/
 .search-container {
   width: 490px;
   display: block;
@@ -67,10 +71,23 @@ input#search-bar {
 }
 
 .search-icon {
-  position:fixed;
+  position: relative;
   float: right;
   width: 60px;
   height: 60px;
   top: -60px;
   right: -58px;
 }
+
+
+#cadastro, 
+#login{
+
+  top: 20px;
+  width: 70%; 
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+
+  
+}
+
