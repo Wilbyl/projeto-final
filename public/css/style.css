@@ -18,14 +18,14 @@ ul {
 }
 
 li {
-  float: left;
+  float:left;
 }
 
 li a {
   display: block;
   color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 14px 16px;
+  text-align:center;
+  padding: 14px 20px;
   text-decoration: none;
   background-color: 252, 110, 110, 0.555;
 }
