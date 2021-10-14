@@ -1,15 +1,10 @@
-body {
-    font-family: 'Tourney', cursive, serif;
-    font-size: 20px;
+body{
     background-image: url("../img/FUNDO 2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-
-  h1 {
-      color:#fff;
-  }
-
+       
+    /* background-color:rgb(166, 194, 166) */
+}
 ul {
     position: fixed;
     top: 0;
@@ -24,7 +19,7 @@ ul {
     /* background-color: rgba(252, 110, 110, 0.555); */
 }
 
-li {
+ul li {
     float: left;
 }
 
@@ -42,4 +37,8 @@ li a:hover {
 }
 .active {
     background-color: 252, 110, 110, 0.555;
+}
+
+td {
+    color: aliceblue;
 }

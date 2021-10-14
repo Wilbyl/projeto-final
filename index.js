@@ -9,5 +9,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   res.render("../index.ejs");
 });
-
-app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
+app.get("/Cadastro", (req, res) => {
+  res.render("../views/cadastro.ejs");
+});
+app.listen(port, () =>
+  console.log(`Servidor rodando em http://localhost:${port}`)
+);
