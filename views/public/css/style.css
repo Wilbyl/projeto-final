@@ -6,9 +6,6 @@ body {
     background-repeat: no-repeat;
   }
 
-  h1 {
-      color:#fff;
-  }
 
 ul {
     position: fixed;
@@ -42,4 +39,7 @@ li a:hover {
 }
 .active {
     background-color: 252, 110, 110, 0.555;
+}
+td{
+    color :rgb(255, 255, 255)
 }
