@@ -5,6 +5,7 @@ const path = require("path");
 const db =require("./model/database");
 const port = process.env.PORT;
 const Usuario= require("./model");
+const Videos = require("./model");
 app.use(express.urlencoded({extended: true}));
 
 
@@ -30,6 +31,10 @@ app.get("/categorias", (req, res) => {
 app.get("/usuario",async(rec,res)=>{
   const usuario = await Usuario.findAll();
   res.json(usuario);
+});
+app.get("/usuario",async(rec,res)=>{
+  const usuario = await Videos.findAll();
+  res.json(videos);
 });
 
 db.conectado();
