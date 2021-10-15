@@ -22,6 +22,11 @@ app.get("/Upload", (req, res) => {
   res.render("../views/upload.ejs");
 });
 
+app.get("/categorias", (req, res) => {
+  res.render("../views/categorias.ejs");
+});
+
+
 app.get("/usuario",async(rec,res)=>{
   const usuario = await Usuario.findAll();
   res.json(usuario);
