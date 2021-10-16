@@ -1,7 +1,8 @@
 const { Sequelize, Datatypes } = require("sequelize");
 const database = require("./database");
-const Usuario = database.sequelize.define(
-  "usuario",
+
+const Videos = database.sequelize.define(
+  "videos",
   {
     ID: {
       type: Sequelize.INTEGER,
@@ -13,8 +14,16 @@ const Usuario = database.sequelize.define(
       type: Sequelize.STRING,
       allowNull: true,
     },
-    Senha: {
-      type: Sequelize.INTEGER,
+    link: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
+    descricao: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
+    categoria: {
+      type: Sequelize.STRING,
       allowNull: true,
     },
   },
@@ -25,9 +34,4 @@ const Usuario = database.sequelize.define(
     updatedAt: false,
   }
 );
-
-
-module.exports = Usuario;
-
-
-/* ler sobre find one*/
+module.exports = Videos;
