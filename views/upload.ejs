@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="pr-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Uploads</title>
-</head>
-<body>
-    <header> 
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/categorias">Categorias</a></li>
-          <li ><a href="/cadastro">Login</a></li>
-          <li ><a href="/Upload">Upload</a></li>
-          <li ><a class="active" href="#about">Contato</a></li> 
-        </ul>
-        </header><br>
-   <h2>Uploads</h2>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/categorias">Categorias</a></li>
+        <li><a href="/cadastro">Login</a></li>
+        <li><a href="/Upload">Upload</a></li>
+        <li><a class="active" href="#about">Contato</a></li>
+      </ul>
+    </header>
+    <br />
+    <h2>Uploads</h2>
+    <form method="POST" action="../model/Videos.js" onsubmit="return enviarDados();">
+      <table>
+        <tr>
+          <td>Nome:</td>
+          <td><input type="text" name="nome" id="nome" /></td>
+        </tr>
+        <tr>
+          <td>link:</td>
+          <td><input type="link" name="link" id="link" /></td>
+        </tr>
 
-   <form method="POST">
-    <label for="nome">Nome:</label>
-    <input type="text" name="nome" id="nome">
+        <tr>
+          <td>descrição:</td>
+          <td><input type="text" name="descricao" id="descricao" /></td>
+        </tr>
 
-    <label for="senha">Senha:</label>
-    <input type="text" name="senha" id="senha">
+        <tr>
+          <td>categoria:</td>
+          <td><input type="text" name="categorias" id="categoria" /></td>
+        </tr>
+        <tr>
+         <td><button type="submit">enviar</button></td>
+        </tr>
 
-    
-
-    <button type="submit">enviar</button>
-</form>
+      </table>
+    </form>
     <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>
