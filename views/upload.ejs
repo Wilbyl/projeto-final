@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="pr-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleU.css" />
     <title>Uploads</title>
-  </head>
-  <body>
-    <header>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/categorias">Categorias</a></li>
-        <li><a href="/cadastro">Login</a></li>
-        <li><a href="/Upload">Upload</a></li>
-        <li><a class="active" href="#about">Contato</a></li>
-      </ul>
-    </header>
-    <br />
-    <h2>Uploads</h2>
-    <form method="POST" action="../model/Videos.js" onsubmit="return enviarDados();">
-      <table>
-        <tr>
-          <td>Nome:</td>
-          <td><input type="text" name="nome" id="nome" /></td>
-        </tr>
-        <tr>
-          <td>link:</td>
-          <td><input type="link" name="link" id="link" /></td>
-        </tr>
+</head>
+<body>
+    <header> 
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/categorias">Categorias</a></li>
+          <li ><a href="/cadastro">Login</a></li>
+          <li ><a href="/Upload">Upload</a></li>
+          <li ><a class="active" href="#about">Contato</a></li> 
+        </ul>
+        </header><br>
+   <!-- <h2>Uploads</h2> -->
 
-        <tr>
-          <td>descrição:</td>
-          <td><input type="text" name="descricao" id="descricao" /></td>
-        </tr>
+   <br><br><br>
+      <form method="POST" action="fichaJS.html" onsubmit="return enviarDados();">
+		
+		<h2>ENVIE SEU FILME</h2>
+	
+				<label for="fname">Nome do Filme:</label>
+				<td><input type="text" name="nome" id="nome" placeholder="Digite nome do Filme.."></td>
+			
+				<label for="fdescription">Sinopse:</label>
+				<td><input type="text" name="sinopse" id="sinopse" placeholder="Digite sinopse do Filme.."></td>
 
-        <tr>
-          <td>categoria:</td>
-          <td><input type="text" name="categorias" id="categoria" /></td>
-        </tr>
-        <tr>
-         <td><button type="submit">enviar</button></td>
-        </tr>
+                <label for="fdescription">Link do trailer:</label>
+				<td><input type="text" name="link" id="link" placeholder="Coloque o ink do trailer.."></td>
 
-      </table>
-    </form>
+                <label for="category">Categoria</label>
+                <select id="category" name="category">
+                  <option value="escolher">Escolha a Categoria</option> 
+                  <option value="acao">Ação</option>
+                  <option value="animacao">Animação</option>
+                  <option value="aventura">Aventura</option>
+                  <option value="comedia">Comedia</option>
+                  <option value="drama">Drama</option>
+                  <option value="terror">Terror</option>
+                </select>
+
+                <input type="file" id="myFile" name="filename">
+                <input type="submit" value="Enviar">
+
+                <input type="submit" value="Editar">
+                <input type="submit" value="Apagar">
+	</form>
+      
     <script src="../js/script.js"></script>
-  </body>
+</body>
 </html>

@@ -40,17 +40,7 @@ li a:hover {
 .active {
     background-color: 252, 110, 110, 0.555;
 }
-
-img {
-    padding-top: 5%;
-    width: 15%;
-}
 h2{
-    text-align: center;
-    color :rgb(255, 255, 255); 
-}
-
-p{
     text-align: center;
     color :rgb(255, 255, 255); 
 }
@@ -70,20 +60,23 @@ label {
 }
 
 input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid;
-    border-radius: 4px;
-    cursor: pointer;
-    vertical-align: middle;
-    border-radius: 6px;
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 6px;
+  float: left;
+  margin-left: 10px;
 }
+
 input[type=submit]:hover {
     background-color: #45a049;
-  }
+}
 
   form {
     margin-left: 30%;
@@ -91,4 +84,6 @@ input[type=submit]:hover {
     border-radius: 5px;
     background-color: #455e89;
     padding: 20px;
+    height: 510px;
+    white-space: inherit;
   }
