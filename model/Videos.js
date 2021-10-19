@@ -4,13 +4,13 @@ const database = require("./database");
 const Videos = database.sequelize.define(
   "videos",
   {
-    ID: {
+    id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allNulls: false,
       primaryKey: true,
     },
-    Nome: {
+    nome: {
       type: Sequelize.STRING,
       allowNull: true,
     },
