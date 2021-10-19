@@ -41,18 +41,15 @@ app.post("/Upload", async (req, res) => {
     res.render("Upload");
   } catch (err) {
     console.log(err);
-    res.render("/Upload",video {
-      mensagem: "Ocorreu um erro ao cadastrar do seu video!",
-    });
+  
   }
 });
 app.get("/video/:id", async (req, res) => {
   const video = await Video.findByPk(req.params.id);
-  res.render("categoria", { filme });
+  res.render("categoria", { video });
 });
 
 app.get("/categorias", async (req, res) => {
-  const video = await Video.findAll();
   res.render("../views/categorias.ejs");
 });
 
