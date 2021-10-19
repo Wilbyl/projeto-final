@@ -26,41 +26,9 @@ app.get("/categorias", (req, res) => {
   res.render("../views/categorias.ejs");
 });
 
-app.get("/usuario", async (rec, res) => {
-  const usuario = await Usuario.findAll();
-  res.json(usuario);
-});
-app.get("/usuario", async (rec, res) => {
-  const videos = await Videos.findAll();
-  res.json(videos);
-});
 
-app.post("/upload", async (req, res) => {
-  const { nome, descricao, link, categorias } = req.body;
-  const filme = await Filme.create({ nome, descricao, link, categorias });
-  res.render("upload", { filme });
-});
 
-app.post("/upload", async (req, res) => {
-  const { nome, descricao, link, categorias } = req.body;
-  if (!nome) {
-    res.render("upload", { mensagem: "Nome é obrigatório" });
-  }
-  if (!imagem) {
-    res.render("upload", { mensagem: "Imagem é obrigatório" });
-  } if (!descricao) {
-    res.render("upload", { mensagem: "descrição é obrigatório" });
-  } if (!link) {
-    res.render("upload", { mensagem: "Link é obrigatório" });
-  }
-  try {
-    const filme = await Filme.create({ nome, descricao, link, categorias });
-    res.render("upload", { filme });
-  } catch (err) {
-    console.log(err);
-    res.render("criar", { mensagem: "Ocorreu um erro ao cadastrar o Filme!" });
-  }
-});
+
 
 db.conectado();
 app.listen(port, () =>

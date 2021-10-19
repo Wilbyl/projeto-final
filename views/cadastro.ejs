@@ -32,10 +32,22 @@
 			
 				<label for="password">Senha:</label>
 				<td><input type="password" name="senha" id="senha" placeholder="Digite sua senha.."></td>
-			
+				<button type="button" onclick="mostrarsenha()" >Mostrar </button>
 				<input type="submit" value="Confirmar">
 		</table>
 	</form>
-      
+	<script>
+ function mostrarsenha(){
+	 var tipo = document.getElementById("senha");
+	 if (tipo.type =="password"){
+		 tipo.type="text"
+	 }else if (tipo.type=="text" ){
+		 tipo.type="password"
+	 }
+ }
+
+	</script>
+
+	<script src="../js/script.js"></script>
 </body>
 </html>
