@@ -1,0 +1,86 @@
+body {
+    font-family: 'Tourney', cursive, serif;
+    font-size: 20px;
+    background-image: url("../img/FUNDO 2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0081a7;
+   
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: 252, 110, 110, 0.555;
+}
+
+li a:hover {
+    background-color: rgb(243, 120, 72);
+}
+.active {
+    background-color: 252, 110, 110, 0.555;
+}
+td{
+    color :rgb(255, 255, 255)
+}
+
+
+section#cadastro {
+    background-color: #d8f3dc;
+    max-width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+section#cadastro h3 {
+    text-align: center;
+    color: #004b23;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px #3359ec;
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+}
+
+section#cadastro table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+}
+
+section#cadastro table th, td {
+    padding: 1rem;
+    color: #3359ec;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+section#cadastro table a {
+    padding: 1rem;
+    color: #3359ec;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+section#cadastro table a:hover {
+    color: #004b23;
+}

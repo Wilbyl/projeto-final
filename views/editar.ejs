@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleE.css" />
+    <title>Login</title>
+</head>
+<body>
+    
+    <ul>
+        
+        <li><a href="/">Home</a></li>
+        <li><a href="/categorias">Categorias</a></li>
+        <li ><a href="/cadastro">Login</a></li>
+		<li ><a href="/Upload">Upload</a></li>
+        <li ><a href="/Contato">Contato</a></li>
+    </ul>
+
+<body>
+    <ul>
+        
+        <li><a href="/">Home</a></li>
+        <li><a href="/categorias">Categorias</a></li>
+        <li ><a href="/cadastro">Login</a></li>
+        <li ><a href="/Upload">Upload</a></li>
+        <li ><a href="/Contato">Contato</a></li>
+      </ul>
+
+    <section id="cadastro">
+      <h3>Edição de Pedidos</h3>
+
+      <table>
+          <thead>
+              <tr>
+                <th>ID</th>
+                <th>Categoria</th>
+                <th>Titulo</th>
+                <th>Descrição</th>
+                <th>Imagem</th>
+                <th>Ações</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% for m in filmes %}
+              <tr>
+                <td>{{m.id}}</td>
+                <td>{{m.categoria}}</td>
+                <td>{{m.titulo}}</td>
+                <td>{{m.descricao}}</td>
+                <td>{{m.imagem}}</td>
+                  <td>
+                      <a href="/editar/{{m.id}}">Editar</a>
+                      <a href="/{{m.id}}">Apagar</a>
+                  </td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  </section>
+
+  <section id="newprod">
+    <div id="card">
+    <h4>Editar</h4>
+
+    <form action="/editar/{{cadastro.id}}" method="POST">
+      <div class="label-float">
+        <input type="text" name="categoria" id="categoria" value="{{cadastro.categoria}}"/>
+        <label for="categoria">Categoria</label>
+      </div>
+
+      <div class="label-float">
+        <input type="text" name="titulo" id="titulo" value="{{cadastro.titulo}}" />
+        <label for="titulo">Título</label>
+      </div>
+
+      <div class="label-float">
+        <input type="text" name="descricao" id="descricao" value="{{cadastro.descricao}}" />
+        <label for="descricao">Descrição</label>
+      </div>
+
+
+      <div class="label-float">
+        <input type="text" name="imagem" id="imagem" value="{{cadastro.imagem}}" />
+        <label for="imagem">Imagem</label>
+      </div>
+
+      <div class="justify-center">
+        <button type="submit">Editar</button>
+      </div>
+  </div>
+    </form>
+  </section>
+
+  </body>
+</html>
