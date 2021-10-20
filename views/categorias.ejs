@@ -1,93 +1,59 @@
 <!DOCTYPE html>
 <html lang="Pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styleCat.css" />
     <title>Categorias</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <ul>
-        
-        <li><a href="/">Home</a></li>
-        <li><a href="/categorias">Categorias</a></li>
-        <li ><a href="/cadastro">Login</a></li>
-        <li ><a href="/Upload">Upload</a></li>
-        <li ><a href="/Contato">Contato</a></li>
-      </ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/categorias">Categorias</a></li>
+      <li><a href="/cadastro">Login</a></li>
+      <li><a href="/Upload">Upload</a></li>
+      <li><a href="/Contato">Contato</a></li>
+    </ul>
 
+    <section id="cadastro">
+      <h3>Cadastro de Filmes</h3>
 
-      
-          <section id="cadastro">
-            <h3>Cadastro de Filmes</h3>
-      
-            <table>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Categoria</th>
-                  <th>Titulo</th>
-                  <th>Descrição</th>
-                  <th>Imagem</th>
-                  <th>Ações</th>
-                </tr>
-              </thead>
-      
-              <tbody>
-                {% for m in filmes %}
-                <tr>
-                  <td>{{m.id}}</td>
-                  <td>{{m.categoria}}</td>
-                  <td>{{m.titulo}}</td>
-                  <td>{{m.descricao}}</td>
-                  <td>{{m.imagem}}</td>
-                  <td>
-                    <a href="/editar/{{m.id}}">Editar</a>
-                    <a href="/{{m.id}}">Apagar</a>
-                  </td>
-                </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          </section>
-      
-          {% if cadastroDelete != undefined %}
-          <section class="modal">
-            <div id="card">
-              <a href="/cadastro" id="fechar"
-                ><i class="fa fa-times" aria-hidden="true"></i
-              ></a>
-              <h2>Confirmação</h2>
-              <hr />
-      
-              <p>Deseja realmente apagar o filme? {{cadastroDelete.nome}}</p>
-              <div>
-                <a href="/cadastro">Não</a>
-                <a href="/delete/{{cadastroDelete.id}}">Sim</a>
-              </div>
-            </div>
-          </section>
-          {% endif %}
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Categoria</th>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Imagem</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
 
+        <tbody>
+          <a href="/editar/{{ m.id }}">Editar</a>
+          <a href="/{{ m.id }}">Apagar</a>
+        </tbody>
+      </table>
+    </section>
 
+    <section class="modal">
+      <div id="card">
+        <a href="/cadastro" id="fechar"
+          ><i class="fa fa-times" aria-hidden="true"></i
+        ></a>
+        <th>Confirmação</th>
+        <hr />
 
+        <th>Deseja realmente apagar o filme?</th>
+        <div>
+          <a href="/cadastro">Não</a>
+          <a href="/delete/{{ cadastroDelete.id }}">Sim</a>
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-          <script src="../js/script.js"></script>
-</body>
+    <script src="../js/script.js"></script>
+  </body>
 </html>

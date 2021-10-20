@@ -1,8 +1,4 @@
-// {
-//   "esversion": 6
-// }
 
-//require("nodemon").config();
 require("dotenv").config();
 
 const express = require("express");
@@ -11,7 +7,7 @@ const path = require("path");
 const db = require("./model/database");
 const port = process.env.PORT || 3000;
 const Usuario = require("./model");
-const Videos = require("./model");
+const Videos = require("./model/Videos.js");
 app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
@@ -28,7 +24,10 @@ app.get("/Upload", (req, res) => {
   res.render("../views/upload.ejs");
 });
 
-app.get("/categorias", (req, res) => {
+app.get("/categorias",async (req, res) => {
+  const videos= await Videos.findAll();
+  console.log(videos);
+  
   res.render("../views/categorias.ejs");
 });
 
@@ -45,26 +44,24 @@ app.get("/usuario", async (rec, res) => {
   res.json(videos);
 });
 
-app.post("/upload", async (req, res) => {
-  const { nome, descricao, link, categorias } = req.body;
-  const filme = await Filme.create({ nome, descricao, link, categorias });
-  res.render("upload", { filme });
-});
+// app.post("/upload", async (req, res) => {
+//   const { nome, descricao, link, categorias } = req.body;
+//   const filme = await Filme.create({ nome, descricao, link, categorias });
+//   res.render("upload", { filme });
+// });
 
 app.post("/upload", async (req, res) => {
   const { nome, descricao, link, categorias } = req.body;
   if (!nome) {
     res.render("upload", { mensagem: "Nome é obrigatório" });
   }
-  if (!imagem) {
-    res.render("upload", { mensagem: "Imagem é obrigatório" });
-  } if (!descricao) {
+  if (!descricao) {
     res.render("upload", { mensagem: "descrição é obrigatório" });
   } if (!link) {
     res.render("upload", { mensagem: "Link é obrigatório" });
   }
   try {
-    const filme = await Filme.create({ nome, descricao, link, categorias });
+    const filme = await Videos.create({ nome, descricao, link, categorias });
     res.render("upload", { filme });
   } catch (err) {
     console.log(err);

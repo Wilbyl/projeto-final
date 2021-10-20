@@ -1,5 +1,6 @@
 const { Sequelize, Datatypes } = require("sequelize");
-const database = require("./database");
+const dat
+abase = require("./database");
 
 const Videos = database.sequelize.define(
   "videos",
